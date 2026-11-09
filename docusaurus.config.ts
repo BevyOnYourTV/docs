@@ -5,13 +5,13 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
-
+  title: 'AirConsole Documentation',
+  tagline: 'Guides for users and developers',
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: {
+      fasterByDefault: false,
+    },
   },
 
   // Set the production url of your site here
@@ -42,26 +42,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/BevyOnYourTV/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/BevyOnYourTV/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -70,76 +52,42 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
+      title: 'AirConsole Docs',
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'userDocumentation',
           position: 'left',
-          label: 'Tutorial',
+          label: 'User documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/BevyOnYourTV/docs',
-          label: 'GitHub',
-          position: 'right',
+          type: 'docSidebar',
+          sidebarId: 'developerDocumentation',
+          position: 'left',
+          label: 'Developer documentation',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'creatingAGame',
+          position: 'left',
+          label: 'Creating a new game',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'exploringGames',
+          position: 'left',
+          label: 'Exploring existing games',
         },
       ],
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/BevyOnYourTV/docs',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      links: [],
+      copyright: `Copyright © ${new Date().getFullYear()} AirConsole.`,
     },
     prism: {
       theme: prismThemes.github,
