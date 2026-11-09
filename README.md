@@ -24,7 +24,7 @@ Links to `.assistant/` resolve from the workspace repository, which holds this o
 | [architecture.md](architecture.md) | How the code is organised and how its parts fit together | `Main_app/` `docs/` `poc_host_remote_connection/` | a module, folder, flow or convention is added, moved or removed |
 | [running.md](running.md) | How to install and run each part locally | `Main_app/apps/web/package.json` `docs/package.json` | a prerequisite, command or setup step changes |
 | [testing.md](testing.md) | What is tested and how to run it | `Main_app/apps/web/` | a test level, runner or command changes |
-| [ci-deployment.md](ci-deployment.md) | Which pipelines exist and how each part ships | `Main_app/.github/workflows/bug.yaml` `Main_app/.github/workflows/feature.yaml` `docs/.github/workflows/deploy.yml` `docs/.github/workflows/test-deploy.yml` | a workflow, trigger or deployment step changes |
+| [ci-deployment.md](ci-deployment.md) | Which pipelines exist and how each part ships | `Main_app/.github/workflows/ci.yml` `docs/.github/workflows/deploy.yml` `docs/.github/workflows/test-deploy.yml` | a workflow, trigger or deployment step changes |
 | [technologies.md](technologies.md) | What the project relies on and how each item is used | `Main_app/apps/web/package.json` | a technology is added, replaced or reconfigured |
 | [adr/](adr/) | Why the structural choices were made | decisions | a structural decision is made or reversed |
 | [decisions-log.md](../.assistant/decisions-log.md) | Smaller choices and their reasons | decisions | a smaller choice is made |
