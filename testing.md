@@ -1,0 +1,37 @@
+# Testing
+
+What is tested and how to run it, for anyone changing the web application. It describes the
+`origin/develop` branch of `Main_app`.
+
+## Unit and component tests
+
+- Runner: Vitest with jsdom, configured in `apps/web/vitest.config.ts`.
+- Location: `apps/web/tests/`, split into `console/unit`, `controller/unit` and `shared`.
+- Scope: rendering and behaviour of pages and components, and the selected-game session helper.
+- State on 2026-11-09: 23 files, 27 tests, all passing.
+
+From `Main_app/apps/web`:
+
+```bash
+npm test
+npm run test:watch
+npx vitest run tests/console/unit/MainMenu.test.tsx
+```
+
+## End-to-end tests
+
+Playwright exists only on the unmerged `origin/playwright_testing` branch: one spec in
+`e2e/navigation.spec.ts` and `playwright.config.ts`, both under `apps/web`.
+
+```bash
+npx playwright test
+```
+
+Not run at takeover.
+
+## Not tested
+
+- There is no coverage gate.
+- There is no automated accessibility check.
+- Server, SDK and game logic do not exist yet, so they have no tests.
+- The `docs` site's only check is its build, in CI.
