@@ -28,6 +28,12 @@ npx vitest run tests/console/unit/MainMenu.test.tsx
 Vitest in `packages/sdk/tests/`, without a browser: transport, manifest, validation, and the screen
 and controller SDKs. Run them alone from `Main_app` with `npm test --workspace @platform/sdk`.
 
+## Simulator tests
+
+Vitest in `packages/simulator/tests/`, without a browser: room routing, bots and the watchdog. One
+test fills a room with 500 virtual controllers. Run them alone with
+`npm test --workspace @platform/simulator`. See [simulator.md](simulator.md).
+
 ## End-to-end tests
 
 Playwright exists only on the unmerged `origin/playwright_testing` branch: one spec in
