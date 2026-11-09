@@ -23,6 +23,11 @@ npm run test:watch
 npx vitest run tests/console/unit/MainMenu.test.tsx
 ```
 
+## SDK tests
+
+Vitest in `packages/sdk/tests/`, without a browser: transport, manifest, validation, and the screen
+and controller SDKs. Run them alone from `Main_app` with `npm test --workspace @platform/sdk`.
+
 ## End-to-end tests
 
 Playwright exists only on the unmerged `origin/playwright_testing` branch: one spec in
@@ -38,5 +43,5 @@ Not run at takeover.
 
 - There is no coverage gate.
 - There is no automated accessibility check.
-- Server, SDK and game logic do not exist yet, so they have no tests.
+- Server and game logic do not exist yet, so they have no tests.
 - The `docs` site's only check is its build, in CI.

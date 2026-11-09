@@ -31,6 +31,11 @@ Client-side routes for the console, under the `/console` base path.
 
 Vitest runs on `develop`. Playwright is on an unmerged branch. See [testing.md](testing.md).
 
+## Zod
+
+Validates the SDK's messages, controller layouts and game manifests at runtime, and gives their
+TypeScript types. Schemas are in `packages/sdk/src/`.
+
 ## Docusaurus
 
 Generates the documentation site from the `docs` repository. Only `docs/docs/` and `docs/blog/`
