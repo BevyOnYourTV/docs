@@ -36,6 +36,10 @@ own libraries for display, animation and sound.
 A layout is a list of 1 to 16 components with unique ids: `button`, `dpad`, or `choice` with 2 to 8
 options. The schemas are in `packages/sdk/src/protocol.ts`, which is the reference for every message.
 
+`ControllerLayoutView`, in `apps/web/src/controller/components/`, renders a layout and reports
+actions in the SDK format. Held controls report a press and a release; a keyboard or screen reader
+activation reports both at once. It is not yet connected to the controller page.
+
 ## Game manifest
 
 `parseGameManifest(input)` validates `id`, `name`, `version` (semantic), `entry`, `minPlayers` and
