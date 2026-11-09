@@ -27,7 +27,7 @@ Links to `.assistant/` resolve from the workspace repository, which holds this o
 | [ci-deployment.md](ci-deployment.md) | Which pipelines exist and how each part ships | `Main_app/.github/workflows/ci.yml` `docs/.github/workflows/deploy.yml` `docs/.github/workflows/test-deploy.yml` | a workflow, trigger or deployment step changes |
 | [technologies.md](technologies.md) | What the project relies on and how each item is used | `Main_app/apps/web/package.json` | a technology is added, replaced or reconfigured |
 | [sdk.md](sdk.md) | What the SDK offers to games and controllers | `Main_app/packages/sdk/` | the SDK's API, protocol or manifest changes |
-| [simulator.md](simulator.md) | How to run a room without phones or a server | `Main_app/packages/simulator/` `Main_app/apps/web/src/dev/` | the room, virtual controllers, bots, watchdog or developer page change |
+| [simulator.md](simulator.md) | How to run a room without phones or a server | `Main_app/packages/simulator/` `Main_app/apps/web/src/dev/` `Main_app/games/test-game/` | the room, virtual controllers, bots, watchdog or developer page change |
 | [adr/](adr/) | Why the structural choices were made | decisions | a structural decision is made or reversed |
 | [decisions-log.md](../.assistant/decisions-log.md) | Smaller choices and their reasons | decisions | a smaller choice is made |
 | [lessons.md](../.assistant/lessons.md) | Mistakes made and what now prevents them | lessons | review, CI or the user catches a mistake |

@@ -42,8 +42,12 @@ fails, so a hung game can be stopped. Pass `room.measureLatency` as `ping`.
 `allow-scripts` only, and shows simulated controllers, the message log, the game phase and the
 latency. A game that stops answering is closed, and restarting keeps the number of players.
 
-It loads `/games/test-game/index.html`, which does not exist yet, so a game cannot run on the page
-for now and it reports the game as unresponsive after a few seconds.
+It loads the test game from `/games/test-game/index.html`, so build that game first (see
+[running.md](running.md)); otherwise the page reports the game as unresponsive after a few seconds.
+
+Known gap: a game that stops answering pings is closed, but in headless Chromium a game stuck in an
+infinite loop was not, as the page's watchdog never reported it. The likely cause is the frame
+sharing the page's process; this was not confirmed, nor tested in other browsers.
 
 ## Limits
 
