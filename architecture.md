@@ -13,7 +13,8 @@ added when the thing they describe exists, not before.
 ```
 bevyonyourtv/                     workspace repository; holds the three below as submodules
 ├── Main_app/                     the product
-│   ├── .github/                  templates and workflows, placeholders for now
+│   ├── .github/                  CI workflow, and placeholder templates
+│   ├── package.json              npm workspaces root and shared lockfile
 │   └── apps/web/                 the web application
 ├── docs/                         this documentation and the Docusaurus site
 └── poc_host_remote_connection/   throwaway reference (HTTPS static server, template apps)

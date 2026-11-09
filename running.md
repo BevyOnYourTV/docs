@@ -21,10 +21,11 @@ Current work is on `develop`; `main` is still the template scaffold.
 ```bash
 cd Main_app
 git switch develop
-cd apps/web
 npm ci
-npm run dev
+npm run dev --workspace web
 ```
+
+`Main_app` uses npm workspaces: install from its root, where the lockfile is.
 
 Vite prints the local URL. The pages are `/`, `/console/` and `/controller/`.
 

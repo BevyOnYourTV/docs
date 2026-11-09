@@ -10,10 +10,15 @@ What is tested and how to run it, for anyone changing the web application. It de
 - Scope: rendering and behaviour of pages and components, and the selected-game session helper.
 - State on 2026-11-09: 23 files, 27 tests, all passing.
 
-From `Main_app/apps/web`:
+From the root of `Main_app`, for every workspace:
 
 ```bash
 npm test
+```
+
+From `Main_app/apps/web`, for that workspace only:
+
+```bash
 npm run test:watch
 npx vitest run tests/console/unit/MainMenu.test.tsx
 ```
