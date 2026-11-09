@@ -28,7 +28,7 @@ apps/web/
 ├── index.html, console/index.html, controller/index.html    the three pages
 ├── src/home/          landing page for choosing a screen
 ├── src/console/       TV and desktop console: pages, components, mock data, router
-├── src/controller/    phone controller: a placeholder page
+├── src/controller/    phone controller: a placeholder page, and components rendering SDK layouts
 ├── src/shared/        accessibility helpers, app shell, configuration, Tailwind styles
 ├── src/components/ui/ shadcn/ui components
 └── tests/             Vitest tests, by surface
