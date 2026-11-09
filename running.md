@@ -11,10 +11,8 @@ How to install and run each part locally, for anyone working on the project.
 ## Clone
 
 ```bash
-git clone --recurse-submodules git@github.com:BevyOnYourTV/<workspace-repository>.git
+git clone --recurse-submodules git@github.com:BevyOnYourTV/workspace.git
 ```
-
-Unknown: the workspace repository has no GitHub remote yet, so this URL has no real name — the owner can answer.
 
 ## Web application
 
