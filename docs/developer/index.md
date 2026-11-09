@@ -18,7 +18,7 @@ how to install the project on your machine and run it
 ### [Contributing](/docs/docs/developer/contributing)
 how to contribute to the project
 
-### [Architecture](/docs/docs/developer/sdk-and-games)
+### [Architecture](/docs/docs/developer/architecture)
 All about the general project architecture
 
 ### [Console](/docs/docs/developer/console)
