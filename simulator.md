@@ -36,6 +36,15 @@ make a run reproducible.
 `startWatchdog({ ping, onUnresponsive, intervalMs? })` calls `onUnresponsive` once when a ping
 fails, so a hung game can be stopped. Pass `room.measureLatency` as `ping`.
 
+## Developer page
+
+`/dev/` in the web application (`apps/web/src/dev/`) runs a game in an iframe sandboxed with
+`allow-scripts` only, and shows simulated controllers, the message log, the game phase and the
+latency. A game that stops answering is closed, and restarting keeps the number of players.
+
+It loads `/games/test-game/index.html`, which does not exist yet, so a game cannot run on the page
+for now and it reports the game as unresponsive after a few seconds.
+
 ## Limits
 
 The room runs in one JavaScript process, so it does not measure real network behaviour. Reconnection

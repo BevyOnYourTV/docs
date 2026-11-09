@@ -30,6 +30,7 @@ apps/web/
 ├── src/home/          landing page for choosing a screen
 ├── src/console/       TV and desktop console: pages, components, mock data, router
 ├── src/controller/    phone controller: a placeholder page, and components rendering SDK layouts
+├── src/dev/           developer page: game in an iframe with simulated controllers
 ├── src/shared/        accessibility helpers, app shell, configuration, Tailwind styles
 ├── src/components/ui/ shadcn/ui components
 └── tests/             Vitest tests, by surface
