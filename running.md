@@ -27,7 +27,7 @@ npm run dev --workspace web
 
 `Main_app` uses npm workspaces: install from its root, where the lockfile is.
 
-Vite prints the local URL. The pages are `/`, `/console/` and `/controller/`.
+Vite prints the local URL. The pages are `/`, `/console/`, `/controller/` and `/dev/`.
 
 No environment variable is needed.
 
