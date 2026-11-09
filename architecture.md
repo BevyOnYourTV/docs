@@ -16,7 +16,8 @@ bevyonyourtv/                     workspace repository; holds the three below as
 │   ├── .github/                  CI workflow, and placeholder templates
 │   ├── package.json              npm workspaces root and shared lockfile
 │   ├── apps/web/                 the web application
-│   └── packages/sdk/             the SDK linking games to the platform; see sdk.md
+│   ├── packages/sdk/             the SDK linking games to the platform; see sdk.md
+│   └── packages/simulator/       rooms without phones or a server; see simulator.md
 ├── docs/                         this documentation and the Docusaurus site
 └── poc_host_remote_connection/   throwaway reference (HTTPS static server, template apps)
 ```

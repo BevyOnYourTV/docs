@@ -49,7 +49,10 @@ activation reports both at once. It is not yet connected to the controller page.
 
 `Transport` has `send`, `onMessage` and `close`. `createMemoryTransportPair()` returns two linked
 endpoints for tests and simulation. It clones each message, so a value that could not cross an
-iframe or a network fails there too.
+iframe or a network fails there too. `createWindowTransport({ host, target, targetOrigin })` links a
+page and a window such as a game iframe, and accepts messages only from `target`.
+
+On creation the screen SDK sends `ready`, and it answers `ping` automatically with `pong`.
 
 ## Validation
 
@@ -62,5 +65,5 @@ An invalid incoming message is passed to `onProtocolError`, which by default log
 
 ## Not built yet
 
-The iframe transport, sensors, vibration, the other controller components and the accessibility
+Sensors, vibration, the other controller components and the accessibility
 options.
