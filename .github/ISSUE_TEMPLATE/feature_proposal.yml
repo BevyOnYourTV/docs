@@ -1,0 +1,29 @@
+name: Documentation proposal
+description: Propose new documentation or an improvement to existing content
+title: "[Docs Proposal]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the documentation gap or reader need this proposal would address.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed content
+      description: Describe the page, guide, example, or structural change you propose.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Intended audience
+      description: Identify who would use this documentation and what they should learn from it.
+    validations:
+      required: false
