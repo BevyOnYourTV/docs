@@ -1,0 +1,32 @@
+name: Task
+description: Track a specific documentation task
+title: "[Docs Task]: "
+labels:
+  - task
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the documentation work that needs to be completed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List the content, review, and validation requirements for completion.
+      placeholder: |
+        - [ ] First requirement
+        - [ ] Second requirement
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Add affected pages, dependencies, or useful references.
+    validations:
+      required: false

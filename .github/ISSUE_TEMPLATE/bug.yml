@@ -1,0 +1,30 @@
+name: Documentation bug
+description: Report incorrect, unclear, or missing documentation
+title: "[Docs Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Documentation issue
+      description: Describe what is incorrect, unclear, outdated, or missing.
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Page or section
+      description: Link to the affected page or provide its file path and section heading.
+      placeholder: https://... or docs/path/to/page.md#section
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: Explain what the documentation should say or show instead.
+    validations:
+      required: false

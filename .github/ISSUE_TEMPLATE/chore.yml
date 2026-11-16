@@ -1,0 +1,29 @@
+name: Chore
+description: Request documentation maintenance or housekeeping work
+title: "[Docs Chore]: "
+labels:
+  - chore
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the documentation maintenance work that needs to be completed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: completion
+    attributes:
+      label: Completion criteria
+      description: List the documentation updates or cleanup required for completion.
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Add affected pages, dependencies, or useful references.
+    validations:
+      required: false
