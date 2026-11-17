@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # AI assistance policy
 
-Griffon permits careful, human-directed AI assistance in development. Our priorities
+NAME_TO_BE_DEFINED permits careful, human-directed AI assistance in development. Our priorities
 are reliable software, contributor understanding, transparent collaboration, and
 respect for maintainers' time. AI is optional, and choosing not to use it must not
 exclude someone from contributing.
@@ -56,7 +56,7 @@ AI output does not waive the project's contribution license requirements.
 
 Test destructive behavior only with disposable data in an isolated environment.
 Report suspected vulnerabilities privately according to
-[Griffon's security policy](https://github.com/GriffonAV/griffon/blob/main/SECURITY.md);
+[NAME_TO_BE_DEFINED security policy](https://github.com/BevyOnYourTV/Main_app/blob/main/SECURITY.md);
 do not automatically turn an audit result into a public issue.
 
 ## Community
@@ -65,16 +65,16 @@ Communicate in your own judgment and take responsibility for messages you post.
 Do not let an agent impersonate contributors or automatically send communications
 on their behalf. Respect people's decisions to use or avoid AI; harassment and
 pressure are covered by our
-[Code of Conduct](https://github.com/GriffonAV/griffon/blob/main/CODE_OF_CONDUCT.md).
+[Code of Conduct](https://github.com/BevyOnYourTV/Main_app/blob/main/CODE_OF_CONDUCT.md).
 
 ## Related guidance
 
-[AGENTS.md](https://github.com/GriffonAV/griffon/blob/main/AGENTS.md) describes
+[AGENTS.md](https://github.com/BevyOnYourTV/Main_app/blob/main/AGENTS.md) describes
 agent workflows, while
-[CONTRIBUTING.md](https://github.com/GriffonAV/griffon/blob/main/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/BevyOnYourTV/Main_app/blob/main/CONTRIBUTING.md)
 applies to every contribution.
 
 Inspired by [Bevy's AI policy](https://bevy.org/learn/contribute/policies/ai/).
-Griffon's policy permits human-reviewed AI-assisted code and prose and does not
+NAME_TO_BE_DEFINED's policy permits human-reviewed AI-assisted code and prose and does not
 adopt Bevy's prohibitions wholesale. Policy changes should be reviewed by the
 project maintainers like other contribution rules.
