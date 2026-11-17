@@ -42,14 +42,17 @@ a simulated room, including eight random bots. Run them with
 
 ## End-to-end tests
 
-Playwright exists only on the unmerged `origin/playwright_testing` branch: one spec in
-`e2e/navigation.spec.ts` and `playwright.config.ts`, both under `apps/web`.
+Playwright, configured in `apps/web/playwright.config.ts`, with specs in `apps/web/e2e/`. It starts the
+dev server itself and runs on Chromium, Firefox and WebKit. One spec exists: navigation from the home
+page to the console. From `Main_app/apps/web`:
 
 ```bash
-npx playwright test
+npx playwright install
+npm run ptest
 ```
 
-Not run at takeover.
+CI runs it on every PR to `develop` or `main`; see [ci-deployment.md](ci-deployment.md). The
+developer page and the test game are not covered by an end-to-end test yet.
 
 ## Not tested
 
