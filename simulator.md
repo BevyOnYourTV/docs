@@ -45,9 +45,17 @@ latency. A game that stops answering is closed, and restarting keeps the number 
 It loads the test game from `/games/test-game/index.html`, so build that game first (see
 [running.md](running.md)); otherwise the page reports the game as unresponsive after a few seconds.
 
-Known gap: a game that stops answering pings is closed, but in headless Chromium a game stuck in an
-infinite loop was not, as the page's watchdog never reported it. The likely cause is the frame
-sharing the page's process; this was not confirmed, nor tested in other browsers.
+A game stuck in an infinite loop is closed only if the browser runs the game frame in a separate
+process; otherwise the loop freezes the page too, and its watchdog never runs. Tested on 2026-11-17:
+
+| Browser | Hung game closed |
+|---|---|
+| Chromium (full build, as in Chrome and Edge) | Yes, after about 5 seconds; covered by `apps/web/e2e/hungGame.spec.ts` |
+| Playwright's Chromium headless shell | No: it runs iframes in the page's process |
+| Playwright's Firefox | No, even with a game on another site; this build may not isolate frames like Firefox does |
+| WebKit | Not tested: it could not run on the test machine |
+
+Unknown: whether Firefox and Safari close a hung game — test them on real browsers.
 
 ## Limits
 

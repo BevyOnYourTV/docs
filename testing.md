@@ -43,16 +43,23 @@ a simulated room, including eight random bots. Run them with
 ## End-to-end tests
 
 Playwright, configured in `apps/web/playwright.config.ts`, with specs in `apps/web/e2e/`. It starts the
-dev server itself and runs on Chromium, Firefox and WebKit. One spec exists: navigation from the home
-page to the console. From `Main_app/apps/web`:
+dev server itself and runs on Chromium, Firefox and WebKit. The Chromium project uses the full
+Chromium build (`channel: 'chromium'`), because the default headless shell runs iframes in the page's
+process, unlike Chrome. Specs:
+
+- `navigation.spec.ts`: navigation from the home page to the console.
+- `hungGame.spec.ts`: the developer page closes a game stuck in an infinite loop, then restarts it.
+  Chromium only; see [simulator.md](simulator.md).
+
+From `Main_app/apps/web`:
 
 ```bash
 npx playwright install
 npm run ptest
 ```
 
-CI runs it on every PR to `develop` or `main`; see [ci-deployment.md](ci-deployment.md). The
-developer page and the test game are not covered by an end-to-end test yet.
+CI runs it on every PR to `develop` or `main`; see [ci-deployment.md](ci-deployment.md). A full game
+on the developer page is not covered by an end-to-end test yet.
 
 ## Not tested
 
