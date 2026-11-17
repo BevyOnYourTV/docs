@@ -34,6 +34,12 @@ Vitest in `packages/simulator/tests/`, without a browser: room routing, bots and
 test fills a room with 500 virtual controllers. Run them alone with
 `npm test --workspace @platform/simulator`. See [simulator.md](simulator.md).
 
+## Test game
+
+Vitest in `games/test-game/tests/`, without a browser: game logic, manifest, and full games through
+a simulated room, including eight random bots. Run them with
+`npm test --workspace @platform/test-game`.
+
 ## End-to-end tests
 
 Playwright exists only on the unmerged `origin/playwright_testing` branch: one spec in
