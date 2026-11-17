@@ -5,6 +5,19 @@ code is `packages/sdk` in `Main_app`, published inside the workspace as `@platfo
 reasoning is in [ADR-0001](adr/0001-sdk-architecture.md). It is not a game engine: games keep their
 own libraries for display, animation and sound.
 
+## Using the package
+
+The package has two entries ([ADR-0002](adr/0002-sdk-compiled-for-node.md)):
+
+- `source` points to `src/index.ts`. Vite, Vitest and TypeScript use it in the web application, the
+  simulator and the test game, which declare the condition in their configuration
+  (`resolve.conditions` and `customConditions`). Nothing needs building to develop or test them.
+- `default` points to the compiled `dist/index.js`, for Node and any consumer without that condition.
+  Build it first from `Main_app` with `npm run build --workspace @platform/sdk`; the root
+  `npm run build` builds it before the other workspaces.
+
+Relative imports inside `packages/sdk/src` end with `.ts`; the compiler rewrites them to `.js`.
+
 ## Screen side
 
 `createScreenSdk(transport)` is used by the game shown on the console.
