@@ -27,8 +27,9 @@ repository with the organisation's current plan.
 
 There is no deployment. One issue-template file states that none is planned for now.
 
-On the unmerged `playwright_testing` branch, `.github/workflows/playwright.yml` runs Playwright on
-pushes to that branch and PRs to `main`.
+`.github/workflows/playwright.yml` runs the end-to-end tests on PRs to `develop` or `main`: it installs
+from the root of `Main_app`, then runs Playwright in `apps/web` and uploads its report. See
+[testing.md](testing.md).
 
 Run the checks a pipeline would run, from the root of `Main_app`:
 
