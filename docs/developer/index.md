@@ -27,7 +27,7 @@ All about the console
 ### [Controller](/docs/docs/developer/controller)
 All about the controller
 
-### [Server](/docs/docs/developer/server)
+### [Server](/docs/docs/developer/server/frontend-protocol)
 All about the server
 
 ### [Operations](/docs/docs/developer/operations)

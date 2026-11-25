@@ -4,7 +4,7 @@ This guide is for the web console and mobile controller clients connecting to th
 
 The game SDK also has a separate message protocol between the platform and a game running in an iframe. That protocol is documented in the [Game SDK message types](#game-sdk-message-types) section.
 
-For connection order, lifecycle examples, permissions, reconnect behavior, and error handling, see the [Realtime Connection Lifecycle](./connection-lifecycle.md). The Zod schemas in [`src/protocol/realtime-protocol.schema.ts`](../src/protocol/realtime-protocol.schema.ts) and [`packages/sdk/src/protocol.ts`](../../../packages/sdk/src/protocol.ts) remain the validation source of truth.
+For connection order, lifecycle examples, permissions, reconnect behavior, and error handling, see the [Realtime Connection Lifecycle](./connection-lifecycle.md). The Zod schemas in [`realtime-protocol.schema.ts`](https://github.com/BevyOnYourTV/Main_app/blob/main/apps/server/src/protocol/realtime-protocol.schema.ts) and [`protocol.ts`](https://github.com/BevyOnYourTV/Main_app/blob/main/packages/sdk/src/protocol.ts) remain the validation source of truth.
 
 ## Socket.IO connection and envelope
 
@@ -186,7 +186,7 @@ type ControllerOutbound = {
 }
 ```
 
-`JSONValue` means any JSON-serializable value. SDK message details and inferred TypeScript exports are defined in [`packages/sdk/src/protocol.ts`](../../../packages/sdk/src/protocol.ts); the SDK factories are in [`packages/sdk/src/screen.ts`](../../../packages/sdk/src/screen.ts) and [`packages/sdk/src/controller.ts`](../../../packages/sdk/src/controller.ts).
+`JSONValue` means any JSON-serializable value. SDK message details and inferred TypeScript exports are defined in [`protocol.ts`](https://github.com/BevyOnYourTV/Main_app/blob/main/packages/sdk/src/protocol.ts); the SDK factories are in [`screen.ts`](https://github.com/BevyOnYourTV/Main_app/blob/main/packages/sdk/src/screen.ts) and [`controller.ts`](https://github.com/BevyOnYourTV/Main_app/blob/main/packages/sdk/src/controller.ts).
 
 ## Related documentation
 
