@@ -192,4 +192,3 @@ type ControllerOutbound = {
 
 - [Realtime Connection Lifecycle](./connection-lifecycle.md) — connection sequence, permissions, reconnect and failure behavior.
 - [Controller Roles and Frontend Events](./controller-roles-and-events.md) — screen host, master controller, and regular controller capabilities.
-- [Server README](../README.md) — local setup, examples, and realtime tester.
