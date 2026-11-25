@@ -18,31 +18,17 @@ The package has two entries ([ADR-0002](adr/0002-sdk-compiled-for-node.md)):
 
 Relative imports inside `packages/sdk/src` end with `.ts`; the compiler rewrites them to `.js`.
 
-## Screen side
+## Screen and controller API
 
-`createScreenSdk(transport)` is used by the game shown on the console.
+`createScreenSdk(transport)` is used by the game shown on the console, `createControllerSdk(transport)`
+on the phone. Every function of both is described for game developers on the *SDK reference* page of
+the documentation site (`docs/creating-a-game/sdk-reference.md` on the `main` branch): players,
+lifecycle, turns, achievements, input, controllers for everyone, one player or a group, and private
+or broadcast data.
 
-| Function | Purpose |
-|---|---|
-| `getPlayers()` | Current players |
-| `onPlayerJoin(handler)`, `onPlayerLeave(handler)` | Arrivals and departures |
-| `onAction(handler)` | Actions sent by the phones |
-| `setController(layout, target?)` | Show a controller on every phone, or on one with `{ playerId }` |
-| `sendToPlayer(playerId, data)` | Private data for one player; must be JSON |
-| `start()`, `pause()`, `resume()`, `end()` | Game lifecycle |
-| `recordScore(playerId, points)` | Record a score |
-| `dispose()` | Stop listening |
-
-## Controller side
-
-`createControllerSdk(transport)` is used on the phone.
-
-| Function | Purpose |
-|---|---|
-| `getLayout()`, `onLayout(handler)` | The controller to display |
-| `onPrivateMessage(handler)` | Private data for this player |
-| `sendAction(componentId, value)` | Send an action; returns a `ValidationResult`, and sends nothing if the action does not match the layout |
-| `dispose()` | Stop listening |
+Targeted controllers, private data, turns and achievements are delivered only to the phones they
+target. Group controllers and broadcasts are sent as one message per player, so the real-time
+server needs no extra field to keep them private.
 
 ## Controller layouts
 
