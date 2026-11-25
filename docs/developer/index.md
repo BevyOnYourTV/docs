@@ -27,5 +27,8 @@ All about the console
 ### [Controller](/docs/docs/developer/controller)
 All about the controller
 
+### [Server](/docs/docs/developer/server)
+All about the server
+
 ### [Operations](/docs/docs/developer/operations)
 CI-CD, Tests
